@@ -1,0 +1,12 @@
+services:
+  node-backend-demo:
+    build:
+      context: ./NodeDev
+      dockerfile: Dockerfile
+    image: node-dev-img:1.0.0
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./NodeDev:/app
+    # environment:
+    #   API_KEY: apikeynib

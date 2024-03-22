@@ -1,0 +1,10 @@
+services:
+  node-backend-demo:
+    build:
+      context: ./NodeDev
+      dockerfile: Dockerfile.prod
+    image: node-dev-img:1.0.0
+    ports:
+      - "8000:8000" # will depend on the host we will be using
+    environment:
+      - NODE_ENV=production
